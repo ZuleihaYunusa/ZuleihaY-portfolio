@@ -4,34 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zuleiha Yunusa Ugbede | Executive Virtual Assistant</title>
-<meta name="description" content="Professional Executive Virtual Assistant with 5+ years of experience in remote operations, calendar management, and multi-client coordination. Supporting executives across US, EU, and EMEA.">
-<meta name="keywords" content="Virtual Assistant, Executive Assistant, Remote Operations, Calendar Management, Zuleiha Yunusa Ugbede, Kano, Nigeria">
-<meta property="og:title" content="Zuleiha Yunusa Ugbede | Executive Virtual Assistant">
-<meta property="og:description" content="A results-driven Executive Virtual Assistant helping leaders stay focused. Available for remote engagements.">
-<meta property="og:type" content="website">
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  /* Refined Premium Palette */
-  --navy: #0A192F;
-  --navy-mid: #112240;
-  --navy-light: #1D3557;
-  --gold: #D4AF37; /* Metallic Gold */
-  --gold-light: #F1D382;
-  --gold-pale: #FEF9EF;
-  --ivory: #F8F9FA;
-  --ivory-dark: #E9ECEF;
-  --charcoal: #121212;
-  --gray: #6C757D;
-  --gray-light: #ADB5BD;
+  --navy: #07111E;
+  --navy-mid: #0D1B2E;
+  --navy-light: #162538;
+  --gold: #C9A84C;
+  --gold-light: #E2C06A;
+  --gold-pale: #FAF0D7;
+  --ivory: #FBF5E6;
+  --ivory-dark: #EFE5CC;
+  --charcoal: #1A1A2E;
+  --gray: #5C6470;
+  --gray-light: #9AA3AF;
   --white: #FFFFFF;
-  --border: rgba(212, 175, 55, 0.3);
-  --glass: rgba(10, 25, 47, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  --border: rgba(201,168,76,0.25);
+  --border-light: rgba(201,168,76,0.12);
 }
 
 html { scroll-behavior: smooth; }
@@ -53,19 +44,16 @@ body {
 nav {
   position: fixed; top: 0; left: 0; right: 0;
   z-index: 1000;
-  padding: 0 4rem;
-  height: 80px;
+  padding: 0 3rem;
+  height: 72px;
   display: flex; align-items: center; justify-content: space-between;
-  transition: var(--transition);
-  background: transparent;
+  transition: all 0.4s ease;
 }
 nav.scrolled {
-  background: var(--glass);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border-bottom: 1px solid var(--glass-border);
-  height: 70px;
-  box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+  background: rgba(7,17,30,0.98);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 4px 40px rgba(0,0,0,0.5);
 }
 .nav-logo {
   font-family: 'Cormorant Garant', serif;
@@ -281,8 +269,6 @@ nav.scrolled {
   text-transform: uppercase;
   color: var(--navy);
   display: flex; align-items: center; justify-content: center; gap: 0.75rem;
-  z-index: 1001;
-  position: relative;
 }
 .availability-bar .pulse-dot {
   width: 7px; height: 7px;
@@ -291,20 +277,6 @@ nav.scrolled {
   animation: pulse 2s infinite;
 }
 @keyframes pulse { 0%,100%{opacity:1; transform:scale(1);} 50%{opacity:0.4; transform:scale(0.8);} }
-
-/* ── CUSTOM CURSOR ─────────────────────── */
-.cursor {
-  width: 25px; height: 25px;
-  border: 1px solid var(--gold);
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  transition: transform 0.1s ease-out, opacity 0.3s ease;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-}
-@media (hover: none) { .cursor { display: none; } }
 
 /* ── SECTIONS ─────────────────────── */
 section { padding: 6rem 2rem; }
@@ -467,18 +439,20 @@ section { padding: 6rem 2rem; }
 }
 .service-card {
   background: var(--navy-mid);
-  padding: 2.5rem 2.25rem;
-  transition: var(--transition);
+  padding: 2.25rem 2rem;
+  transition: background 0.3s;
   position: relative;
-  display: flex; flex-direction: column;
 }
-.service-card:hover { 
-  background: var(--navy-light); 
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+.service-card::after {
+  content: '';
+  position: absolute; bottom: 0; left: 2rem; right: 2rem;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transition: transform 0.3s;
 }
-.service-card:hover .service-num { color: var(--white); opacity: 0.1; }
-.service-card:hover .service-icon { transform: scale(1.1); color: var(--gold-light); }
+.service-card:hover { background: var(--navy-light); }
+.service-card:hover::after { transform: scaleX(1); }
 .service-num {
   font-family: 'Cormorant Garant', serif;
   font-size: 2.5rem;
@@ -1545,7 +1519,7 @@ footer em { color: var(--gold); font-style: normal; }
       <div class="contact-form-wrap reveal reveal-delay-2">
         <h3>Send a Message</h3>
         <p>I typically respond within 1-2 hours during business days.</p>
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <form action="https://formspree.io/f/mzdybbvr" method="POST">
           <div class="form-row">
             <div class="form-group">
               <input type="text" name="name" placeholder="Your Name" required>
@@ -1625,29 +1599,11 @@ if (skillsGrid) skillsObs.observe(skillsGrid);
 // Year
 document.getElementById('yr').textContent = new Date().getFullYear();
 
-// Custom Cursor
-const cursor = document.createElement('div');
-cursor.className = 'cursor';
-document.body.appendChild(cursor);
-
-document.addEventListener('mousemove', e => {
-  cursor.style.left = e.clientX + 'px';
-  cursor.style.top = e.clientY + 'px';
-  cursor.style.opacity = '1';
-});
-
-document.addEventListener('mouseleave', () => cursor.style.opacity = '0');
-
-// Hover effects for cursor
-const interactiveElements = document.querySelectorAll('a, button, .btn, .portfolio-card, .service-card');
-interactiveElements.forEach(el => {
-  el.addEventListener('mouseenter', () => {
-    cursor.style.transform = 'translate(-50%, -50%) scale(2)';
-    cursor.style.backgroundColor = 'rgba(212, 175, 55, 0.1)';
-  });
-  el.addEventListener('mouseleave', () => {
-    cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-    cursor.style.backgroundColor = 'transparent';
+// Resume button
+document.getElementById('resumeBtn').addEventListener('click', function(e) {
+  fetch('zuleiha-resume.pdf', { method: 'HEAD' }).catch(() => {
+    e.preventDefault();
+    alert('Rename your CV file to "zuleiha-resume.pdf" and place it in the same folder as this HTML file.');
   });
 });
 </script>
