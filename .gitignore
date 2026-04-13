@@ -1,0 +1,10 @@
+# Windows image thumb caches
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Folder config file
+.DS_Store
+
+# Git directory (if somehow nested)
+.git/
